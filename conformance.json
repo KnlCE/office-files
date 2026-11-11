@@ -1,0 +1,219 @@
+{
+  "capabilities": [
+    "tools"
+  ],
+  "checks": [
+    {
+      "detail": "first line on stdout after 257.0ms (the daemon waits 20s, spec/limits.yaml plugin_start_timeout_secs)",
+      "name": "the plugin says something before the daemon gives up",
+      "ok": true
+    },
+    {
+      "detail": "12 tool schema(s) checked",
+      "name": "tool schemas parse with an object root",
+      "ok": true
+    },
+    {
+      "detail": "6 propert(ies), defaults: {\"allowed_roots\":\"\",\"libreoffice_path\":\"\",\"max_file_mb\":50,\"max_result_kb\":24,\"max_unpacked_mb\":256,\"timeout_secs\":120}",
+      "name": "config schema parses with an object root",
+      "ok": true
+    },
+    {
+      "detail": "the defaults from [config].schema were accepted and the plugin stayed healthy",
+      "name": "config schema round-trips",
+      "ok": true
+    },
+    {
+      "detail": "skipped: this plugin declares no actions, triggers or ui_contributions, so it contributes no label the daemon renders.",
+      "name": "labels survive a language round trip",
+      "ok": true
+    },
+    {
+      "detail": "HealthCheck without `x-plugin-token` answered UNAUTHENTICATED",
+      "name": "a call without the daemon's token is refused",
+      "ok": true
+    },
+    {
+      "detail": "acknowledged in 8.9ms, process gone 147.4ms after Shutdown (grace is 5s, spec/limits.yaml plugin_stop_grace_secs)",
+      "name": "Shutdown is honoured within the grace period",
+      "ok": true
+    },
+    {
+      "detail": "1 host call(s) reached the daemon: log",
+      "name": "the plugin talked to the daemon",
+      "ok": true
+    },
+    {
+      "detail": "no host call was refused for want of `x-session-token`",
+      "name": "every host call carried the session token",
+      "ok": true
+    }
+  ],
+  "failures": [],
+  "hooks": [
+    {
+      "capability": "tools",
+      "detail": "12 tool(s)",
+      "requirement": "required",
+      "rpc": "ListTools",
+      "status": "ok"
+    },
+    {
+      "capability": "tts",
+      "detail": "`tts` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "TtsListVoices",
+      "status": "skipped"
+    },
+    {
+      "capability": "actions",
+      "detail": "`actions` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "GetPluginActionTypes",
+      "status": "skipped"
+    },
+    {
+      "capability": "triggers",
+      "detail": "`triggers` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "GetPluginTriggerTypes",
+      "status": "skipped"
+    },
+    {
+      "capability": "tools",
+      "detail": "`office_help` answered",
+      "requirement": "required",
+      "rpc": "CallTool",
+      "status": "ok"
+    },
+    {
+      "capability": "tts",
+      "detail": "`tts` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "TtsSynthesize",
+      "status": "skipped"
+    },
+    {
+      "capability": "tts",
+      "detail": "`tts` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "TtsGetConfigFields",
+      "status": "skipped"
+    },
+    {
+      "capability": "tts",
+      "detail": "`tts` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "TtsActivate",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "SttProcess",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "SttGetLanguages",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "SttGetConfigFields",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "SttLoad",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "SttUnload",
+      "status": "skipped"
+    },
+    {
+      "capability": "stt",
+      "detail": "`stt` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "SttGetLoadState",
+      "status": "skipped"
+    },
+    {
+      "capability": "ai_provider",
+      "detail": "`ai_provider` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "AiComplete",
+      "status": "skipped"
+    },
+    {
+      "capability": "actions",
+      "detail": "`actions` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "ExecuteAction",
+      "status": "skipped"
+    },
+    {
+      "capability": "triggers",
+      "detail": "`triggers` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "OnActiveTriggers",
+      "status": "skipped"
+    },
+    {
+      "capability": "ui_contributions",
+      "detail": "`ui_contributions` is not declared in plugin.toml",
+      "requirement": "required",
+      "rpc": "GetUiContributions",
+      "status": "skipped"
+    },
+    {
+      "capability": "ui_contributions",
+      "detail": "`ui_contributions` is not declared in plugin.toml",
+      "requirement": "optional",
+      "rpc": "CallFromUi",
+      "status": "skipped"
+    },
+    {
+      "capability": "core",
+      "detail": "accepted",
+      "requirement": "optional",
+      "rpc": "OnConfigChanged",
+      "status": "ok"
+    },
+    {
+      "capability": "core",
+      "detail": "accepted",
+      "requirement": "optional",
+      "rpc": "OnLanguageChanged",
+      "status": "ok"
+    },
+    {
+      "capability": "core",
+      "detail": "healthy = true, status = ok",
+      "requirement": "required",
+      "rpc": "HealthCheck",
+      "status": "ok"
+    },
+    {
+      "capability": "core",
+      "detail": "acknowledged in 8.9ms",
+      "requirement": "required",
+      "rpc": "Shutdown",
+      "status": "ok"
+    }
+  ],
+  "language": "python",
+  "plugin_id": "office-files",
+  "protocol": 1
+}

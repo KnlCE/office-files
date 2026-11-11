@@ -1,0 +1,11 @@
+{
+  "config.file_limit": "Maximum file size (MiB)",
+  "config.libreoffice": "LibreOffice executable (optional)",
+  "config.result_limit": "Inspection response limit (KiB)",
+  "config.roots": "Allowed directories",
+  "config.roots_desc": "One absolute directory per line; empty permits all accessible local files.",
+  "config.timeout": "Operation timeout (seconds)",
+  "config.zip_limit": "Maximum unpacked OOXML size (MiB)",
+  "listing.description": "Read, create and edit Word, Excel and PowerPoint files and PDF pages locally.",
+  "listing.name": "Office Files"
+}

@@ -1,0 +1,11 @@
+# Build artifacts
+*.astraplugin
+
+__pycache__/
+*.pyc
+.venv/
+requirements.lock
+.pytest_cache/
+.ruff_cache/
+test-results.xml
+*.backup-*

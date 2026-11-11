@@ -1,0 +1,8 @@
+astra-plugin-sdk>=0.6.2,<0.7
+python-docx>=1.2,<2
+openpyxl>=3.1.5,<4
+python-pptx>=1.0.2,<2
+pypdfium2>=4.30,<6
+jsonschema>=4.23,<5
+Pillow>=10.4,<13
+defusedxml>=0.7.1,<1

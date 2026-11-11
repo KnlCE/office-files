@@ -1,0 +1,11 @@
+{
+  "listing.name": "Office Files",
+  "listing.description": "Чтение, создание и редактирование файлов Word, Excel и PowerPoint и страниц PDF локально.",
+  "config.roots": "Разрешённые каталоги",
+  "config.roots_desc": "Один абсолютный каталог на строку; пустое поле разрешает все доступные локальные файлы.",
+  "config.libreoffice": "Исполняемый файл LibreOffice (необязательно)",
+  "config.timeout": "Время операции (секунды)",
+  "config.file_limit": "Максимальный размер файла (МиБ)",
+  "config.zip_limit": "Максимальный размер распакованного OOXML (МиБ)",
+  "config.result_limit": "Лимит ответа инспекции (КиБ)"
+}

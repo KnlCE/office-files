@@ -1,0 +1,17 @@
+{
+  "locales": {
+    "ru": {
+      "config.file_limit": "a081ee8c3b65",
+      "config.libreoffice": "52efe7e5e830",
+      "config.result_limit": "bed54d41a870",
+      "config.roots": "efc6641f0e87",
+      "config.roots_desc": "dc26dc0fa83a",
+      "config.timeout": "a3b479f85f79",
+      "config.zip_limit": "489329893a6e",
+      "listing.description": "24245437619a",
+      "listing.name": "ae0feab76a29"
+    }
+  },
+  "schema": "astra.plugin.locales/1",
+  "source": "en"
+}

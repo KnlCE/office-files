@@ -1,0 +1,24 @@
+[plugin]
+id = "office-files"
+name = "Office Files"
+version = "0.2.0"
+description = "Read, create and edit Word, Excel and PowerPoint files and PDF pages locally."
+author = ""
+call_timeout_secs = 180
+
+[entry]
+command = "python"
+args = ["-m", "src.plugin"]
+runtimes = ["python"]
+
+[capabilities]
+tools = true
+
+[permissions]
+
+[platform]
+os = ["windows", "linux"]
+arch = ["x86_64"]
+
+[config]
+schema = '{"type":"object","additionalProperties":false,"properties":{"allowed_roots":{"type":"string","title":"$config.roots","description":"$config.roots_desc","default":""},"libreoffice_path":{"type":"string","title":"$config.libreoffice","default":""},"timeout_secs":{"type":"integer","title":"$config.timeout","minimum":1,"maximum":120,"default":120},"max_file_mb":{"type":"integer","title":"$config.file_limit","minimum":1,"maximum":100,"default":50},"max_unpacked_mb":{"type":"integer","title":"$config.zip_limit","minimum":1,"maximum":512,"default":256},"max_result_kb":{"type":"integer","title":"$config.result_limit","minimum":4,"maximum":28,"default":24}}}'

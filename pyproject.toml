@@ -1,0 +1,22 @@
+[project]
+name = "office-files"
+version = "0.2.0"
+description = "Read, create and edit Word, Excel and PowerPoint files and PDF pages locally."
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.8", "xlsxwriter>=3.2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
