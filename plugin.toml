@@ -3,7 +3,8 @@ id = "office-files"
 name = "Office Files"
 version = "0.2.0"
 description = "Read, create and edit Word, Excel and PowerPoint files and PDF pages locally."
-author = ""
+author = "KNICE"
+license = "MIT"
 call_timeout_secs = 180
 
 [entry]
